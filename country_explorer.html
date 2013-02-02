@@ -185,11 +185,25 @@ var countryEssay = "No essay yet";
 			var geocoder = new google.maps.Geocoder();
 			MarkACountry(geocoder, "Nigeria")
 		}
-		else {
-		//	alert(chosen)
+		else if (chosen == "WaterPollution") {
+		       clearOverlays();
+		       var geocoder = new google.maps.Geocoder();
+		       MarkACountry(geocoder, "Egypt")
+		}
+		else if (chosen == "InsdustrialPollution") {
+		        clearOverlays () ;
+			var geocoder = new google.maps.Geocoder () ;
+			MarkACountry(geocoder, "Egypt")
+		}
+		else if (chosen == "SoilSalinization") {
+		       clearOverlays () ;
+		       var geocoder = new google.maps.Geocoder () ;
+		       MarkACountry(geocoder, "Egypt")
+		}
+		//	alert(cclhosen)
 		}
 
-	}
+
 	function clearOverlays() {
 	//	alert("Clearing")
 	  for (var i = 0; i < markersArray.length; i++ ) {
@@ -233,6 +247,9 @@ markersArray.push(marker);
 	<Input type = radio Name = r1 Value = "ClimateChange" onClick =GetSelectedItem()>Climate Change<BR>
 	<Input type = radio Name = r1 Value = "SeaLevelRise" onClick =GetSelectedItem()>Sea Level Rise<BR>
 	<Input type = radio Name = r1 Value = "Deforestation" onClick =GetSelectedItem()>Deforestation<BR>
+	<input type = radio Name = r1 Value = "WaterPollution" onClick =GetSelectedItem()>Water Pollution<BR>
+	<input type = radio Name = r1 Value = "IndustrialPollution" onClick =GetSelectedItem ()>Industrial Pollution<BR>
+	<input type = radio Name = r1 Value = "SoilSalinization" onClick =GetSelectedItem ()>Soil Salinization<BR>
 	Other environmental issues will go here.
 	</center>
 	</form>
@@ -244,4 +261,9 @@ markersArray.push(marker);
 essays['Guyana'] = $.ajax({url: "Guyana.html", async: false}).responseText;
 
 
-</script> 
+</script>
+<script>
+essays['Egypt'] = $.ajax({url: "Egypt.html", async: false}).responseText;
+
+
+</script>
